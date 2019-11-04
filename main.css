@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+ }
+body {
+    font-family: 'Nunito', sans-serif;
+ }
+ 
+ ul {
+    text-align: center;
+ }
+
+ li {
+   display: inline-block;
+ }
+
+ ul, li {
+    padding-left: 0px;
+    list-style: none;
+ }
+
+ .display-result{
+    display: inline-block;
+ }
+ 
+ input{
+     float: left;
+ }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="html wireframe for quiz application">
+    <title>The Ultimate Avengers Quiz</title>
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- start page for the quiz -->
+    <main role="main" class="container">
+    <section class="start-page">
+        <header role="banner" class="heading">
+        <h1>The Ultimate Avengers Quiz</h1>
+        </header>
+        <button>Start the Quiz</button>
+    </section>
+    <!-- question box -->
+    <form role="form" action="/destination_page" accept-charset="UTF-8" class="quiz-box" method="POST">
+    <section class="display-result">
+            <ul>
+                <li class="counter-q">Question:
+                    <span class="question">1</span>/10</li>
+                <li class="counter-s">Score:
+                    <span class="score">0</span>
+                </li>
+            </ul>
+    </section>
+    <section class="question-box">
+        <fieldset>
+                <legend>Who wrote the Avengers?</legend>
+                <label for="option-a" name="answer-a">Bruce Banner</label>
+                <input type="radio" name="answer-a" value="1"><br>
+                <label for="option-a" name="answer-b">Stan Lee</label>
+                <input type="radio" name="answer-b" value="2"><br>
+                <label for="option-a" name="answer-c">J.K. Rowling</label>
+                <input type="radio" name="answer-c" value="3"><br>
+                <label for="option-a" name="answer-d">Tim Burton</label>
+                <input type="radio" name="answer-d" value="4"><br>
+                <button type="submit" class="submit-answer">Submit</button>
+        </fieldset>
+    </section>
+    <!-- feedback response for the submitted answer -->
+        <section class="feedback-box"></section>
+        <p>Sorry, this is not the correct answer</p>
+        <p>The correct answer is: Stan Lee</p>
+        <button type="button" class="next-question">Next</button>
+        <section class="feedback-box"></section>
+        <p>You guessed right!</p>
+        <button type="button" class="next-question">Next</button>
+      </section>
+    <!-- summary of your results + restart the quiz -->
+        <section class="summary-box"></section>
+        <p>Your score is: <span class="score">0</span> out of 10</p>
+        <button type="button" class="restart-quiz">Next</button>
+        </section>
+    </form>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/main.js"></script>
+</body>
+</html>
