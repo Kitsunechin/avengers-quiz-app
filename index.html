@@ -10,22 +10,28 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- start page for the quiz -->
+    <!-- Top header -->
     <main role="main" class="container">
+    <header role="banner" class="heading">
+    <h1>The Ultimate Avengers Quiz</h1>
+    </header>
+    <hr>
+    <!-- start page for the quiz (First screenshot)-->
+    <div class ="js-intro intro">
     <section class="start-page">
-        <header role="banner" class="heading">
-        <h1>The Ultimate Avengers Quiz</h1>
-        </header>
-        <button>Start the Quiz</button>
-    </section>
-    <!-- question box -->
-    <form role="form" action="/destination_page" accept-charset="UTF-8" class="quiz-box" method="POST">
-    <section class="display-result">
+            <img alt="The Avengers Image"></img>
+         <button class="js-start">Start the Quiz</button>
+    </section></div>
+    <hr>
+    <!-- question box (Second screenshot)-->
+    <div class="js-question question">
+    <form role="form" action="/destination_page" accept-charset="UTF-8" class="quiz-box" method="POST"></form>
+    <section class="display-result js-counters">
             <ul>
                 <li class="counter-q">Question:
-                    <span class="question">1</span>/10</li>
+                    <span class="js-question-num">1</span>/10</li>
                 <li class="counter-s">Score:
-                    <span class="score">0</span>
+                    <span class="js-score">0</span>
                 </li>
             </ul>
     </section>
@@ -33,31 +39,42 @@
         <fieldset>
                 <legend>Who wrote the Avengers?</legend>
                 <label for="option-a" name="answer-a">Bruce Banner</label>
-                <input type="radio" name="answer-a" value="1"><br>
+                <input type="radio" name="answer-a" value="0"><br>
                 <label for="option-a" name="answer-b">Stan Lee</label>
-                <input type="radio" name="answer-b" value="2"><br>
+                <input type="radio" name="answer-b" value="1"><br>
                 <label for="option-a" name="answer-c">J.K. Rowling</label>
-                <input type="radio" name="answer-c" value="3"><br>
+                <input type="radio" name="answer-c" value="2"><br>
+                <label for="option-a" name="answer-d">Gardner Fox</label>
+                <input type="radio" name="answer-d" value="3"><br>
                 <label for="option-a" name="answer-d">Tim Burton</label>
                 <input type="radio" name="answer-d" value="4"><br>
                 <button type="submit" class="submit-answer">Submit</button>
-        </fieldset>
+        </fieldset></form>
     </section>
-    <!-- feedback response for the submitted answer -->
-        <section class="feedback-box"></section>
+        </div>
+    <br><hr>
+    <!-- feedback response for the submitted answers (Third screenshot) -->
+    <div class="js-feedback feedback">
+        <section class="feedback-box">
+            <img alt="Happy Thanos Image"></img>
         <p>Sorry, this is not the correct answer</p>
         <p>The correct answer is: Stan Lee</p>
         <button type="button" class="next-question">Next</button>
-        <section class="feedback-box"></section>
+    </section>
+    <hr>
+        <section class="feedback-box">
+            <img alt="Happy Groot Image"></img>
         <p>You guessed right!</p>
         <button type="button" class="next-question">Next</button>
-      </section>
-    <!-- summary of your results + restart the quiz -->
-        <section class="summary-box"></section>
-        <p>Your score is: <span class="score">0</span> out of 10</p>
+      </section></div>
+    <br><hr>
+    <!-- summary of your results + restart the quiz (Fourth screenshot)-->
+    <div class="js-summary summary">
+        <section class="summary-box">
+            <img alt="Doctor Strange Image"></img>
+        <p>Your final score is: <span class="score">0</span> out of 10</p>
         <button type="button" class="restart-quiz">Next</button>
-        </section>
-    </form>
+        </section></div>
     </main>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="/main.js"></script>
