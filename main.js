@@ -193,7 +193,7 @@ const STORE = [
 						<p>You guessed right!</p>
 						<img class="image" src="Pictures/correct.jpg" alt="Happy Groot Image"></img>
 						<button type="submit" class="submit-answer" id="js-next">Next</button>
-					</section>`);
+					</section>`)
 				} else if (getValue !== correctAnswer) {
 					updateQuestionNum();
 					lastQuestion();
@@ -204,9 +204,9 @@ const STORE = [
 					<p>The correct answer is: ${STORE[index].answers[correctAnswer]}</p>
 						<img class="image" src="Pictures/incorrect.jpeg" alt="Happy Thanos Image"></img>
 						<button type="submit" class="submit-answer" id="js-next">Next</button>
-					</section>`);
-				}
-			}); return updateAnswer;
+					</section>`)
+				} return updateAnswer;
+			});
 		};
 		// write a function displaying feedback // displayFeedback();
 		// if correct display "you are right" feedback + display counters function
