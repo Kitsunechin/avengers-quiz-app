@@ -114,6 +114,7 @@ const STORE = [
 		let score = 0;
 		let questionNum = 1;
 		let index = -1;
+
 		// load the intro screen
 		function displayIntro() {
 			$("#js-intro").show();
@@ -130,7 +131,7 @@ const STORE = [
 		// update the score counter
 		function updateScore() {
 			score ++;
-			$("span.js-score").text(`${score}`);
+			$(".js-score").text(`${score}`);
 		};
 		// update the question counter
 		function updateQuestionNum() {
@@ -139,8 +140,7 @@ const STORE = [
 		};
 		// update question index of the element in STORE
 		function increaseIndex() {
-			// if (index <= STORE.length){
-			index ++;
+			index++;
 		};
 		// show question box only 
 		function showQuestion() {
@@ -155,7 +155,6 @@ const STORE = [
 			showQuestion();
 			$(".js-question-box").html(`<form role="form" action="/destination_page" accept-charset="UTF-8" class="quiz-box" method="POST">
 				<fieldset>
-					<div class="pic-opacity"></div>
 					<legend>${STORE[index].question}</legend>
 						<label name="answer-label">${STORE[index].answers[0]}
 						<input type="radio" name="answer" value="0"></label>
@@ -167,7 +166,7 @@ const STORE = [
 						<input type="radio" name="answer" value="3"></label>
 						<label name="answer-label">${STORE[index].answers[4]}
 						<input type="radio" name="answer" value="4"></label>
-						<button type="submit" class="submit-answer">Submit</button>
+						<button type="submit" class="submit-answer" id="js-submit">Submit</button>
 				</fieldset>
 				</form>`);
 		};
@@ -176,7 +175,7 @@ const STORE = [
 		// call the function for feedback
 		// update page counter
 		function submitAnswer() {
-			$("#js-question").on("click", ".submit-answer", event => {
+			$(".js-question-box").on("click", "#js-submit", event => {
 				event.preventDefault();
 				let checkedOption = $(".js-question-box").find("input[type=radio][name=answer]:checked");
 				let getValue = $(".js-question-box").find("input[type=radio][name=answer]:checked").val();
@@ -193,7 +192,7 @@ const STORE = [
 					<section class="feedback-box">
 						<p>You guessed right!</p>
 						<img class="image" src="Pictures/correct.jpg" alt="Happy Groot Image"></img>
-						<button type="submit" class="submit-answer" id="js-next"">Next</button>
+						<button type="submit" class="submit-answer" id="js-next">Next</button>
 					</section>`);
 				} else if (getValue !== correctAnswer) {
 					updateQuestionNum();
@@ -205,11 +204,9 @@ const STORE = [
 					<p>The correct answer is: ${STORE[index].answers[correctAnswer]}</p>
 						<img class="image" src="Pictures/incorrect.jpeg" alt="Happy Thanos Image"></img>
 						<button type="submit" class="submit-answer" id="js-next">Next</button>
-					</section>`)
+					</section>`);
 				}
-				return updateAnswer;	
-			});
-		// return submitResult;
+			}); return updateAnswer;
 		};
 		// write a function displaying feedback // displayFeedback();
 		// if correct display "you are right" feedback + display counters function
