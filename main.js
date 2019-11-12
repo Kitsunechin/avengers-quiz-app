@@ -146,9 +146,7 @@ const STORE = [
 		function increaseIndexCheck() {
 			indexCheck++;
 		};
-		function decreaseIndexCheck() {
-			indexCheck--;
-		};
+		
 		// show question box only 
 		function showQuestion() {
 			$("#js-intro").hide();
