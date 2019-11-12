@@ -196,6 +196,11 @@ legend {
     width: 30%;
   }   
 
+  .box{
+    margin-left: 10em;
+    margin-right: 10em;
+  }
+
   .image {
     width: 60%;
   }
@@ -204,6 +209,11 @@ legend {
 @media only screen and (min-width: 1200px){ 
   .top-logo {
   width: 25%;
+  }
+
+  .box{
+    margin-left: 15em;
+    margin-right: 15em;
   }
 
   .image {
