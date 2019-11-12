@@ -255,7 +255,6 @@ const STORE = [
 			}
 		};
 		// bind event on a click to restart the quiz 
-		// restart quiz;
 		function restartQuiz() {
 			$("#js-summary").on("click", "button", event => {
 				event.preventDefault();
