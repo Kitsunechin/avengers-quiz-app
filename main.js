@@ -72,7 +72,7 @@ const STORE = [
 				"Spiderman, Doctor Strange, Hulk",
 				"Black Widow, Hawkeye",
 				"Iron Man, Starlord, Spiderman",
-				"Black Widow, Iron Man, Capitan America"
+				"Black Widow, Iron Man, Captain America"
 			],
 			correctAnswer: 4
 		},
