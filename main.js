@@ -114,6 +114,7 @@ const STORE = [
 		let score = 0;
 		let questionNum = 1;
 		let index = -1;
+		let indexCheck = 0;
 
 		// load the intro screen
 		function displayIntro() {
@@ -141,6 +142,9 @@ const STORE = [
 		// update question index of the element in STORE
 		function increaseIndex() {
 			index++;
+		};
+		function increaseIndexCheck() {
+			indexCheck++;
 		};
 		// show question box only 
 		function showQuestion() {
@@ -174,16 +178,13 @@ const STORE = [
 		// call the function comparing that value against the value of the correct answer
 		// call the function for feedback
 		// update page counter
-		function submitAnswer() {
 			$(".js-question-box").on("click", "#js-submit", event => {
 				event.preventDefault();
 				let checkedOption = $(".js-question-box").find("input[type=radio][name=answer]:checked");
 				let getValue = $(".js-question-box").find("input[type=radio][name=answer]:checked").val();
-				let correctAnswer = `${STORE[index].correctAnswer}`;
+				let correctAnswer = `${STORE[indexCheck].correctAnswer}`;
 				let updateAnswer = $("#js-feedback");
-				if (!checkedOption.is(":checked")) {
-					alert("You have to choose an option")
-				} else if (getValue === correctAnswer) {
+			 	if (getValue === correctAnswer) {
 					updateScore();
 					updateQuestionNum();
 					lastQuestion();
@@ -193,7 +194,7 @@ const STORE = [
 						<p>You guessed right!</p>
 						<img class="image" src="Pictures/correct.jpg" alt="Happy Groot Image"></img>
 						<button type="submit" class="submit-answer" id="js-next">Next</button>
-					</section>`)
+					</section>`);
 				} else if (getValue !== correctAnswer) {
 					updateQuestionNum();
 					lastQuestion();
@@ -201,20 +202,18 @@ const STORE = [
 					updateAnswer.html(`
 					<section class="feedback-box">
 					<p>Sorry, this is not the correct answer</p>
-					<p>The correct answer is: ${STORE[index].answers[correctAnswer]}</p>
+					<p>The correct answer is: ${STORE[indexCheck].answers[correctAnswer]}</p>
 						<img class="image" src="Pictures/incorrect.jpeg" alt="Happy Thanos Image"></img>
 						<button type="submit" class="submit-answer" id="js-next">Next</button>
-					</section>`)
-				} return updateAnswer;
+					</section>`);
+				} increaseIndexCheck(); return updateAnswer; 
 			});
-		};
 		// write a function displaying feedback // displayFeedback();
 		// if correct display "you are right" feedback + display counters function
 		// if incorrect display "you are wrong" feedback + display updated counters function
 		function displayFeedback() {
 			$("#js-question").hide();
 			$("#js-feedback").show();
-			nextQuestion();
 		};
 		// write event listener on next button and call the next question and update the question counter
 		// if question is nr 10 call function for summary if not then display next question
@@ -250,14 +249,12 @@ const STORE = [
 				displayQuestion();
 			}
 		};
-		
 		// bind event on a click to restart the quiz 
 		// restart quiz;
 		function restartQuiz() {
 			$("#js-summary").on("click", "button", event => {
 				event.preventDefault();
 				freshStart();
-				displayIntro();
 			});
 		  };
 		//Clear the counters
@@ -265,14 +262,15 @@ const STORE = [
 			score = 0;
 			questionNum = 1;
 			index = -1;
+			indexCheck = 0;
 			$(".js-score").text(`${score}`);
 			$(".js-question-num").text(`${questionNum}`);
-
+			displayIntro();
 		}
 		//start quiz
 		function startQuiz() {
 			displayIntro();
-			submitAnswer();
+			nextQuestion();
 			restartQuiz();
 		};
 
