@@ -146,6 +146,9 @@ const STORE = [
 		function increaseIndexCheck() {
 			indexCheck++;
 		};
+		function decreaseIndexCheck() {
+			indexCheck--;
+		};
 		// show question box only 
 		function showQuestion() {
 			$("#js-intro").hide();
@@ -195,6 +198,9 @@ const STORE = [
 						<img class="image" src="Pictures/correct.jpg" alt="Happy Groot Image"></img>
 						<button type="submit" class="submit-answer" id="js-next">Next</button>
 					</section>`);
+				} else if (!checkedOption.is(":checked")) {
+					alert("Check the answer before proceeding to the next question.");
+					decreaseIndexCheck();
 				} else if (getValue !== correctAnswer) {
 					updateQuestionNum();
 					lastQuestion();
@@ -206,7 +212,8 @@ const STORE = [
 						<img class="image" src="Pictures/incorrect.jpeg" alt="Happy Thanos Image"></img>
 						<button type="submit" class="submit-answer" id="js-next">Next</button>
 					</section>`);
-				} increaseIndexCheck(); return updateAnswer; 
+				} 
+				increaseIndexCheck(); return updateAnswer;
 			});
 		// write a function displaying feedback // displayFeedback();
 		// if correct display "you are right" feedback + display counters function
