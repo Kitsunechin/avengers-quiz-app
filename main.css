@@ -36,7 +36,7 @@ fieldset {
  }
  
 ul {
-  font-size: 0.9em;
+  font-size: 1em;
   margin-top: 0.1em;
   text-align: center;
   margin-left: auto;
@@ -56,7 +56,7 @@ ul {
 
 .counter-s {
   float:right;
-  margin-left: 8em;
+  margin-left: 5em;
 }
 
 fieldset {
@@ -74,9 +74,9 @@ input[type="radio"] {
    align-items: center;
    justify-content: space-between;
    text-align: left;
-   margin-top: 3em;
-   margin-left: 5em;
-   margin-right: 5em;
+   margin-top: 2em;
+   margin-left: 2.5em;
+   margin-right: 2.5em;
    margin-bottom: 5em;
    padding: 1em;
    border: 0.1em #371d0d solid;
@@ -168,6 +168,11 @@ legend {
 }
  
 @media only screen and (min-width: 768px) {
+  .box {
+   font-size: 1.5em;
+   margin-left: 2.5em;
+   margin-right: 2.5em;
+  }
  .top-logo {
    width: 35%;
   } 
@@ -197,8 +202,8 @@ legend {
   }   
 
   .box{
-    margin-left: 10em;
-    margin-right: 10em;
+    margin-left: 3em;
+    margin-right: 3em;  
   }
 
   .image {
@@ -212,8 +217,8 @@ legend {
   }
 
   .box{
-    margin-left: 15em;
-    margin-right: 15em;
+    margin-left: 4em;
+    margin-right: 4em;
   }
 
   .image {
