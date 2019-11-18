@@ -1,227 +1,229 @@
- * {
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0;
-   border-radius: 1%;
- }
- 
- body {
-   font-family: 'Nunito', sans-serif;
-   color: #2f3163;
-   background-color: #F9FDFE;
- }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 1%;
+}
 
- .intro {
-    background: url("Pictures/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 5em;
-    opacity: 0.8;
-    margin-top: 3em;
-    margin-left: 1.3em;
-    margin-right: 1.3em;
-    text-align: center;
-    border-radius: 2em;
- }
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #2f3163;
+  background-color: #F9FDFE;
+}
 
-fieldset {
-    border: none;
- }
-
- .heading {
-   text-transform: uppercase;
-   margin-top: 5.5em;
+.intro {
+   background: url("Pictures/background.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding: 5em;
+   opacity: 0.8;
+   margin-top: 3em;
+   margin-left: 1.3em;
+   margin-right: 1.3em;
    text-align: center;
-   font-size: 0.9em;
- }
- 
-ul {
-  font-size: 1em;
-  margin-top: 0.1em;
+   border-radius: 2em;
+}
+
+
+.heading {
+  text-transform: uppercase;
+  margin-top: 5.5em;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 0.9em;
+}
+
+ul {
+ font-size: 1em;
+ margin-top: 0.1em;
+ text-align: center;
+ margin-left: auto;
+ margin-right: auto;
 }
 
 .counter-q,
 .counter-s {
-  display: inline-block;
-  list-style: none;
-  margin-bottom: 1.5em;
+ display: inline-block;
+ list-style: none;
+ margin-bottom: 1em;
+ font-size: 1.1em;
+ font-weight: bolder;
 }
 
 .counter-q {
-  float:left;
+ float:left;
 }
 
 .counter-s {
-  float:right;
-  margin-left: 5em;
+ float:right;
+ margin-left: 3em;
 }
 
 fieldset {
-  display: flex;
-}
-
-input[type="radio"] {
-   float: left;
+ display: flex;
+ border: none;
 }
 
 .box {
-   display: flex;
-   color: #250e33;
-   flex-direction: column;
-   align-items: center;
-   justify-content: space-between;
-   text-align: left;
-   margin-top: 2em;
-   margin-left: 2.5em;
-   margin-right: 2.5em;
-   margin-bottom: 5em;
-   padding: 1em;
-   border: 0.1em #371d0d solid;
-   background-color: rgb(187, 203, 216);
+  display: flex;
+  color: #250e33;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  margin-top: 2em;
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+  margin-bottom: 5em;
+  padding: 1em;
+  border: 0.1em #371d0d solid;
+  background-color: rgb(187, 203, 216);
 }
 
 .feedback-box,
 .summary-box {
-  margin-top: 1em;
-  text-align: center;
+ margin-top: 1em;
+ text-align: center;
 }
 
 label {
-   display: block;
-   margin-bottom: 0.5em;
-   padding: 0.5em;
-   cursor: pointer;
- }
+  display: flex;
+  margin-bottom: 1.5em;
+  cursor: pointer;
+}
 
 input[type="radio"] {
-   float: left;
-   margin-right: 1em;
+  flex: 0 0 auto;
+  float: left;
+  margin-right: 1em;
+}
+
+span {
+  flex: 1 1 auto;
 }
 
 .image {
-   margin-top: 2em;
-   margin-bottom: 0.5em;
-   width: 80%;
-   height: auto;
-   border-radius: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  width: 80%;
+  height: auto;
+  border-radius: 1.5em;
 }
 
 .top-logo {
-   width: 40%;
-   margin-left: auto;
-   margin-right: auto;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
 }  
 
 legend {
-   text-transform: uppercase;
-   border-radius: 1em;
-   color: #7E3883;
-   padding: 0.9em;
-   font-weight: bolder;
-   text-align: center;
+  text-transform: uppercase;
+  border-radius: 1em;
+  color: #7E3883;
+  padding: 0.9em;
+  margin-bottom: 1em;
+  font-weight: bolder;
+  text-align: center;
 }
 
 .js-start {
-   z-index: 5;
-   padding: 1.5em;
-   margin-top: 7em;
-   margin-left: auto;
-   margin-right: auto;
-   cursor: pointer;
-   font-family: inherit;
-   text-transform: uppercase;
-   font-size: 0.8em;
-   font-weight: bolder;
-   border-radius: 1em;
-   background-color: rgb(245, 228, 255);
-   border: none;
-   color: #2f3163;
+  z-index: 5;
+  padding: 1.5em;
+  margin-top: 7em;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bolder;
+  border-radius: 1em;
+  background-color: rgb(245, 228, 255);
+  border: none;
+  color: #2f3163;
 }
 
 .submit-answer,
 .submit,
 .restart-quiz {
-   display: block;
-   margin-top: 2em;
-   margin-bottom: 2em;
-   margin-left: auto;
-   margin-right: auto;
-   cursor: pointer;
-   font-family: inherit;
-   text-transform: uppercase;
-   font-size: 0.8em;
-   padding: 1em;
-   border-radius: 1em;
-   background-color: #7E3883;
-   border: none;
-   color: #ffffff;
+  display: block;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: #7E3883;
+  border: none;
+  color: #ffffff;
 }
- 
- button:hover,
- button:active {
-   color: #2f3163;
-   background-color: #250e33;
-   color: #ffffff;
+
+button:hover,
+button:active {
+  color: #2f3163;
+  background-color: #250e33;
+  color: #ffffff;
 }
- 
+
 @media only screen and (min-width: 768px) {
-  .box {
+ .box {
+  font-size: 1.5em;
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+ }
+.top-logo {
+  width: 35%;
+ } 
+ 
+ .image {
+   width: 70%;
+ }
+
+ p {
    font-size: 1.5em;
-   margin-left: 2.5em;
-   margin-right: 2.5em;
-  }
- .top-logo {
-   width: 35%;
-  } 
-  
-  .image {
-    width: 70%;
-  }
+ }
 
-  p {
-    font-size: 1.5em;
-  }
+ .submit-answer,
+ .restart-quiz {
+   font-size: 0.9em;
+ }
 
-  .submit-answer,
-  .restart-quiz {
-    font-size: 0.9em;
-  }
-
- .js-start {
-   margin-top: 9em;
-   font-size: 1em;
-  }
+.js-start {
+  margin-top: 9em;
+  font-size: 1em;
+ }
 }
 
 @media only screen and (min-width: 1024px){
-  .top-logo {
-    width: 30%;
-  }   
+ .top-logo {
+   width: 30%;
+ }   
 
-  .box{
-    margin-left: 4em;
-    margin-right: 4em;  
-  }
+ .box{
+   margin-left: 4em;
+   margin-right: 4em;  
+ }
 
-  .image {
-    width: 60%;
-  }
+ .image {
+   width: 60%;
+ }
 }
 
 @media only screen and (min-width: 1200px){ 
-  .top-logo {
-  width: 25%;
-  }
+ .top-logo {
+ width: 25%;
+ }
 
-  .box{
-    margin-left: 7em;
-    margin-right: 7em;
-  }
+ .box{
+   margin-left: 7em;
+   margin-right: 7em;
+ }
 
-  .image {
-    width: 50%;
-  }
+ .image {
+   width: 50%;
+ }
 }

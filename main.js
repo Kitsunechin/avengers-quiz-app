@@ -1,5 +1,5 @@
 const STORE = [
-    {
+   		{
 			question: "Who were the original Avengers in the comic book?",
 			answers: [
 				"Batman, Spider-Man, Superman and Wonder Woman",
@@ -146,6 +146,10 @@ const STORE = [
 		function increaseIndexCheck() {
 			indexCheck++;
 		};
+
+		function decreaseIndexCheck() {
+			indexCheck--;
+		};
 		
 		// show question box only 
 		function showQuestion() {
@@ -158,21 +162,32 @@ const STORE = [
 		function displayQuestion() {
 			increaseIndex();
 			showQuestion();
-			$(".js-question-box").html(`<form role="form" action="/destination_page" accept-charset="UTF-8" class="quiz-box" method="POST">
-				<fieldset>
-					<legend>${STORE[index].question}</legend>
-						<label name="answer-label">${STORE[index].answers[0]}
-						<input type="radio" name="answer" value="0"></label>
-						<label name="answer-label">${STORE[index].answers[1]}
-						<input type="radio" name="answer" value="1"></label>
-						<label name="answer-label">${STORE[index].answers[2]}
-						<input type="radio" name="answer" value="2"></label>
-						<label name="answer-label">${STORE[index].answers[3]}
-						<input type="radio" name="answer" value="3"></label>
-						<label name="answer-label">${STORE[index].answers[4]}
-						<input type="radio" name="answer" value="4"></label>
+			$(".js-question-box").html(
+				`<form role="form" action="/destination_page" accept-charset="UTF-8" class="quiz-box" method="POST">
+					<fieldset>
+						<legend>${STORE[index].question}</legend>
+						<label name="answer-label">
+						<input type="radio" name="answer" value="0">
+						<span>${STORE[index].answers[0]}</span>
+						</label>
+						<label name="answer-label">
+						<input type="radio" name="answer" value="1">
+						<span>${STORE[index].answers[1]}</span>
+						</label>
+						<label name="answer-label">
+						<input type="radio" name="answer" value="2">
+						<span>${STORE[index].answers[2]}</span>
+						</label>
+						<label name="answer-label">
+						<input type="radio" name="answer" value="3">
+						<span>${STORE[index].answers[3]}</span>
+						</label>
+						<label name="answer-label">
+						<input type="radio" name="answer" value="4">
+						<span>${STORE[index].answers[4]}</span>
+						</label>
 						<button type="submit" class="submit-answer" id="js-submit">Submit</button>
-				</fieldset>
+					</fieldset>
 				</form>`);
 		};
 		// bind an evnt on a click to listen for a submit to get the 'checked' value of the radio button
@@ -205,8 +220,8 @@ const STORE = [
 					displayFeedback();
 					updateAnswer.html(`
 					<section class="feedback-box">
-					<p>Sorry, this is not the correct answer</p>
-					<p>The correct answer is: ${STORE[indexCheck].answers[correctAnswer]}</p>
+						<p>Sorry, this is not the correct answer</p>
+						<p>The correct answer is: ${STORE[indexCheck].answers[correctAnswer]}</p>
 						<img class="image" src="Pictures/incorrect.jpeg" alt="Happy Thanos Image"></img>
 						<button type="submit" class="submit-answer" id="js-next">Next</button>
 					</section>`);
@@ -262,7 +277,7 @@ const STORE = [
 			});
 		  };
 		//Clear the counters
-		function freshStart(){
+		function freshStart() {
 			score = 0;
 			questionNum = 1;
 			index = -1;
