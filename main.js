@@ -164,7 +164,7 @@ const STORE = [
 			showQuestion();
 			$(".js-question-box").html(
 				`<form role="form" action="/destination_page" accept-charset="UTF-8" class="quiz-box" method="POST">
-					<fieldset>
+					<fieldset aria-hidden="true">
 						<legend>${STORE[index].question}</legend>
 						<label name="answer-label">
 						<input type="radio" name="answer" value="0">
@@ -186,7 +186,7 @@ const STORE = [
 						<input type="radio" name="answer" value="4">
 						<span>${STORE[index].answers[4]}</span>
 						</label>
-						<button type="submit" class="submit-answer" id="js-submit">Submit</button>
+						<button type="submit" class="submit-answer" id="js-submit" aria-expanded="false" aria-controls="more-content">Submit</button>
 					</fieldset>
 				</form>`);
 		};
@@ -206,7 +206,7 @@ const STORE = [
 					lastQuestion();
 					displayFeedback();
 					updateAnswer.html(`
-					<section class="feedback-box">
+					<section class="feedback-box" aria-hidden="true">
 						<p>You guessed right!</p>
 						<img class="image" src="Pictures/correct.jpg" alt="Happy Groot Image"></img>
 						<button type="submit" class="submit-answer" id="js-next">Next</button>
@@ -219,7 +219,7 @@ const STORE = [
 					lastQuestion();
 					displayFeedback();
 					updateAnswer.html(`
-					<section class="feedback-box">
+					<section class="feedback-box" aria-hidden="true">
 						<p>Sorry, this is not the correct answer</p>
 						<p>The correct answer is: ${STORE[indexCheck].answers[correctAnswer]}</p>
 						<img class="image" src="Pictures/incorrect.jpeg" alt="Happy Thanos Image"></img>

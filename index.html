@@ -19,7 +19,7 @@
     <!-- start page for the quiz (First screenshot)-->
      <div class ="intro" id="js-intro">
          <div class="start-page">
-             <button class="js-start">Start the Quiz</button>
+             <button class="js-start" aria-expanded="false" aria-controls="more-content">Start the Quiz</button>
          </div>
      </div>
     <!-- question box (Second screenshot)-->
@@ -31,14 +31,14 @@
                          <li class="counter-s">Score:<span class="js-score"> 0</span></li>
                      </ul>
                     </div>
-             <div class="js-question-box">
+             <div class="js-question-box" aria-hidden="true" aria-live="assertive">
              </div>
     </div>
     <!-- feedback response for the submitted answers (Third screenshot) -->
-        <div class="feedback box" id="js-feedback">
+        <div class="feedback box" id="js-feedback" aria-hidden="true" aria-live="assertive">
         </div>
     <!-- summary of your results (Fourth screenshot) -->
-        <div class="summary box" id="js-summary">
+        <div class="summary box" id="js-summary" aria-hidden="true" aria-live="assertive">
         </div>
     </section>
 </main>
